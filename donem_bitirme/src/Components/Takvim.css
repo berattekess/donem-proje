@@ -1,0 +1,91 @@
+/* Takvimin genel stilini özelleştirme */
+.custom-calendar {
+  background-color: #91b18f;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;  /* Takvimi sınırlı bir genişlikte tut */
+  margin: 0 auto;    /* Ortalamak için */
+}
+
+/* Takvimdeki başlık kısmını özelleştirme */
+.custom-calendar .react-calendar__navigation {
+  background-color: #4CAF50; /* Başlık kısmı yeşil */
+  color: white;
+  border-radius: 5px;
+}
+
+/* Takvimdeki günlere tıklanabilir hale getirme */
+.custom-calendar .react-calendar__tile {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Günlere tıklandığında arka plan rengini değiştirme */
+.custom-calendar .react-calendar__tile:active {
+  background-color: #4CAF50; /* Yeşil arka plan */
+  color: white;
+}
+
+/* Seçili günün stilini özelleştirme */
+.custom-calendar .react-calendar__tile--active {
+  background-color: #ff5722; /* Seçili gün turuncu */
+  color: white;
+}
+
+/* Bugün seçili olan günü farklı renklerle işaretleme */
+.custom-calendar .react-calendar__tile--now {
+  background-color: #2196F3; /* Bugün mavi renkte */
+  color: white;
+}
+
+/* Takvimdeki başlık (ay ve yıl) stilini değiştirme */
+.custom-calendar .react-calendar__navigation button {
+  background-color: #3f51b5; /* Buton rengi */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-calendar .react-calendar__navigation button:hover {
+  background-color: #303f9f; /* Hover efekti */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .custom-calendar {
+    padding: 5px;
+    max-width: 90%; /* Mobil cihazlar için genişliği %90 yap */
+  }
+
+  /* Takvim başlık butonlarının boyutunu küçültme */
+  .custom-calendar .react-calendar__navigation button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Günlere tıklanabilir stilin boyutunu küçültme */
+  .custom-calendar .react-calendar__tile {
+    font-size: 12px; /* Gün boyutunu küçült */
+  }
+
+  /* Seçili günün stilini daha belirgin yapma */
+  .custom-calendar .react-calendar__tile--active {
+    background-color: #ff5722; /* Seçili gün turuncu */
+    color: white;
+  }
+}
+
+/* Tablet ve mobil cihazlarda daha küçük butonlar */
+@media (max-width: 576px) {
+  .custom-calendar .react-calendar__tile {
+    font-size: 10px; /* Küçük ekranlar için daha küçük yazı */
+  }
+
+  .custom-calendar .react-calendar__navigation button {
+    font-size: 12px;
+  }
+}

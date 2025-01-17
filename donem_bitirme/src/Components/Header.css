@@ -1,0 +1,35 @@
+/* Header için genel ayarlar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #bdcbd8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* İçeriklerin sağa ve sola ayrılması */
+  padding: 0 20px;
+  z-index: 9;
+}
+
+/* Sağ köşeye yerleşmesi için özel sınıf */
+.right-button {
+  margin-left: auto; /* Butonu sağa yaslamak için */
+  background-color: #007bff; /* Buton arka plan rengi */
+  color: white; /* Buton yazı rengi */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.right-button:hover {
+  background-color: #0056b3; /* Hover efekti */
+}
+
+.dd{
+  background-color: gray !important;
+  border-radius: 20px;
+}
